@@ -6,6 +6,7 @@
     <title>Document</title>
      <script src="https://cdn.tailwindcss.com"></script>
      <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
 </head>
 <body class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-screen">
@@ -39,13 +40,19 @@
                       </li>
                   </ul>
             </div>
-            <div>
+            <div class="flex items-center gap-6">
                   <button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec] ">Sign in</button>
-            </div>
+                  <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden md hydrated"role="img" aria-label="menu"></ion-icon>
+                </div>
         </nav>
     </header>
 
-     
+   
+    <script>
+         function onToggleMenu(e){
+            e.name =  e.name==='menu'?'close':'menu'
+         }
+    </script>
     
 </body>
 </html>
