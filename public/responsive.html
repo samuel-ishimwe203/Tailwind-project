@@ -11,13 +11,13 @@
 </head>
 <body class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-screen">
 
-    <header class="bg-white">
+    <header class="bg-white pb-5">
         <nav class="flex justify-between items-center w-[92%] mx-auto">
             <div>
               <h1 class="w-16 text-2xl font-bold">Logo</h1>
             </div>
 
-            <div class="md:static absolute bg-white md:min-h-fit md:w-auto min-h-[60vh] left-0 top-[-100%] w-full flex items-center px-5 ">
+            <div class=" nav-links duration-500 md:static absolute bg-white md:min-h-fit md:w-auto min-h-[60vh] left-0 top-[-100%] w-full flex items-center px-5 ">
                   <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vh] gap-8">
                       <li>
                          <a class="hover:text-gray-500" href="#">Products</a>
@@ -49,8 +49,11 @@
 
    
     <script>
+        const navLink = document.querySelector('.nav-links')
          function onToggleMenu(e){
             e.name =  e.name==='menu'?'close':'menu'
+            navLink.classList.toggle('top-[8%]')
+
          }
     </script>
     
